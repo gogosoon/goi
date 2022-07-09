@@ -27,7 +27,7 @@
     "lint": "eslint --ext .ts --ext .tsx .",
     "build": "tsc -p . --explainFiles",
     "audit:npm-check-updates": "npx npm-check-updates --errorLevel 1",
-    "prepare": "npm run build"
+    "prepare": "yarn build"
   },
   "dependencies": {
     "chalk": "^4.1.0",
