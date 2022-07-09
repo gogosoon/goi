@@ -67,22 +67,29 @@ export async function generateModel(): Promise<void> {
     const modelName = capitalizeFirstLetter(tableName) + "Model";
     const fileName = `${modelName}.ts`;
     let tempModelNames: string = `import {
-      sequelize,
-      GoDB,
-      PrimaryKey,
-      Column,
-      AutoIncrement,
+      Sequelize,
       Table,
+      AutoIncrement,
+      Column,
+      PrimaryKey,
       CreatedAt,
       UpdatedAt,
-    } from "@gogocode-package/database";
+      DeletedAt,
+      HasMany,
+      HasOne,
+      BelongsTo,
+      ForeignKey,
+      BelongsToMany,
+      Model
+    } from "sequelize-typescript";
+    import sequelize from ".";
     import { Field, ID, ObjectType } from "type-graphql";
     
     @Table({
       tableName: "${tableName}",
     })
     @ObjectType()
-    export class ${modelName} extends GoDB.Model {`;
+    export class ${modelName} extends Model {`;
 
     response[0].forEach((columnInfo) => {
       // console.log("Types: " , columnInfo["Type"])
