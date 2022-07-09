@@ -1,6 +1,6 @@
 {
   "name": "@ggsn/goi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A CLI Tool to convert Table to Typescript Sequelize Model files",
   "author": "Codewithsooners <codewithsooners@gogosoon.com>",
   "keywords": [
@@ -25,7 +25,7 @@
     "test": "sudo npm i -g && goi",
     "start": "yarn start",
     "lint": "eslint --ext .ts --ext .tsx .",
-    "build": "tsc -p . --explainFiles",
+    "build": "tsc -p .",
     "audit:npm-check-updates": "npx npm-check-updates --errorLevel 1",
     "prepare": "yarn build"
   },
