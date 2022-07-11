@@ -60,7 +60,6 @@ export function generateColumn(columnName, type, isPrimary) {
     column +
     `
           @Column
-          @Field()
           public ${columnName}: ${type};
       `;
   return column;
