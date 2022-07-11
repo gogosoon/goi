@@ -83,12 +83,10 @@ export async function generateModel(): Promise<void> {
       Model
     } from "sequelize-typescript";
     import sequelize from ".";
-    import { Field, ID, ObjectType } from "type-graphql";
     
     @Table({
       tableName: "${tableName}",
     })
-    @ObjectType()
     export class ${modelName} extends Model {`;
 
     response[0].forEach((columnInfo) => {
@@ -109,7 +107,7 @@ export async function generateModel(): Promise<void> {
     `;
 
     fs.writeFileSync(fileName, tempModelNames);
-    terminal.green("Model Generated ! ");
+    terminal.green(`Model Generated ! \n`);
   } catch (error) {
     console.log("\n\n");
     errorMsg(error);
