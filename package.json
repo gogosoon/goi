@@ -1,6 +1,6 @@
 {
   "name": "@ggsn/goi",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A CLI Tool to convert Table to Typescript Sequelize Model files",
   "author": "Codewithsooners <codewithsooners@gogosoon.com>",
   "keywords": [
