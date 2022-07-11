@@ -11,10 +11,12 @@ console.log(
 
 program
   .command("model:new")
-  .description("Generates a new Model")
+  .description(
+    "Generates a new Sequelize-Typescript Model for a specified table from the database."
+  )
   .action(generateModel);
 
-if (!process.argv.slice(2).length) {
+if (!process.argv.slice(1).length) {
   program.outputHelp();
 }
 program.parse(process.argv);
